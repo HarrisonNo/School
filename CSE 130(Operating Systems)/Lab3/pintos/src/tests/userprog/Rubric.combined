@@ -1,0 +1,10 @@
+Combined System Calls:
+
+- Per Process Open File Table.
+1	comb-oft
+
+- Exec Wait Create Open Read Write Close.
+1	comb-ewcorwc
+
+- Nested Exec & Wait 
+1	comb-nested

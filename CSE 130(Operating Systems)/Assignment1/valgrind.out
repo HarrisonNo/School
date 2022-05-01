@@ -1,0 +1,46 @@
+==2438155== Memcheck, a memory error detector
+==2438155== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2438155== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==2438155== Command: ./usort -m 32
+==2438155== 
+==2438746== 
+==2438746== HEAP SUMMARY:
+==2438746==     in use at exit: 0 bytes in 0 blocks
+==2438746==   total heap usage: 8 allocs, 8 frees, 13,888 bytes allocated
+==2438746== 
+==2438746== All heap blocks were freed -- no leaks are possible
+==2438746== 
+==2438746== For lists of detected and suppressed errors, rerun with: -s
+==2438746== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2438155== 
+==2438155== HEAP SUMMARY:
+==2438155==     in use at exit: 0 bytes in 0 blocks
+==2438155==   total heap usage: 8 allocs, 8 frees, 13,888 bytes allocated
+==2438155== 
+==2438155== All heap blocks were freed -- no leaks are possible
+==2438155== 
+==2438155== For lists of detected and suppressed errors, rerun with: -s
+==2438155== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2438872== Memcheck, a memory error detector
+==2438872== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2438872== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==2438872== Command: ./psort -m 32
+==2438872== 
+==2439379== 
+==2439379== HEAP SUMMARY:
+==2439379==     in use at exit: 0 bytes in 0 blocks
+==2439379==   total heap usage: 8 allocs, 8 frees, 13,888 bytes allocated
+==2439379== 
+==2439379== All heap blocks were freed -- no leaks are possible
+==2439379== 
+==2439379== For lists of detected and suppressed errors, rerun with: -s
+==2439379== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==2438872== 
+==2438872== HEAP SUMMARY:
+==2438872==     in use at exit: 0 bytes in 0 blocks
+==2438872==   total heap usage: 8 allocs, 8 frees, 13,888 bytes allocated
+==2438872== 
+==2438872== All heap blocks were freed -- no leaks are possible
+==2438872== 
+==2438872== For lists of detected and suppressed errors, rerun with: -s
+==2438872== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

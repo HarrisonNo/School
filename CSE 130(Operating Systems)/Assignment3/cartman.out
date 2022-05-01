@@ -1,0 +1,8 @@
+** Random Test (17 tracks) **
+CART  0 on Brown   track between junctions J and K
+CART  1 on Gray    track between junctions L and M
+CART 14 on Red     track between junctions A and B
+CART  4 on Blue    track between junctions E and F
+CART 16 on Azure   track between junctions H and I
+FAIL Reserved
+    Functional: FAIL   (program error)
