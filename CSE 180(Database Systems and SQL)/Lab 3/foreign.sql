@@ -1,0 +1,17 @@
+ALTER TABLE PaymentMethods
+ADD CONSTRAINT PMcustID FOREIGN KEY (custID)
+REFERENCES Customers (custID)
+    ON UPDATE CASCADE
+    ON DELETE NO ACTION;
+
+ALTER TABLE Payments
+ADD CONSTRAINT PreservationID FOREIGN KEY (reservationID)
+REFERENCES Reservations (reservationID)
+    ON UPDATE NO ACTION
+    ON DELETE SET NULL;
+
+ALTER TABLE Payments
+ADD CONSTRAINT Pcard FOREIGN KEY (cardType,cardNum)
+REFERENCES PaymentMethods (cardType,cardNum)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE;
