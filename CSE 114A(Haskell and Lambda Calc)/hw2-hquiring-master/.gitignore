@@ -1,0 +1,5 @@
+.stack-work/*
+*.tgz
+*.lock
+*.swp
+.vscode/

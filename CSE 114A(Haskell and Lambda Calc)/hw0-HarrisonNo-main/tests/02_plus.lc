@@ -1,0 +1,56 @@
+-------------------------------------------------------------------------------
+-- DO NOT MODIFY THIS SEGMENT
+-------------------------------------------------------------------------------
+
+let ZERO  = \f x -> x
+let ONE   = \f x -> f x
+let TWO   = \f x -> f (f x)
+let THREE = \f x -> f (f (f x))
+let FOUR  = \f x -> f (f (f (f x)))
+
+let SUC   = \n f x -> f (n f x)
+let ADD   = \n m -> n SUC m
+let MUL   = \n m -> n (ADD m) ZERO
+
+
+-------------------------------------------------------------------------------
+-- YOU SHOULD ONLY MODIFY THE TEXT BELOW, JUST THE PARTS MARKED AS COMMENTS
+-------------------------------------------------------------------------------
+eval suc_one :
+  SUC ONE
+  =d> (\n f x -> f (n f x)) (\f x -> f x)
+  =a> (\n f x -> f (n f x)) (\a b -> a b)
+  =b> (\f x -> f ((\a b -> a b) f x))
+  =b> (\f x -> f ((\b -> f b) x))
+  =b> (\f x -> f (f x))
+  =d> TWO
+
+eval add_one_zero :
+  ADD ONE ZERO
+  =d> (\n m -> n SUC m) ONE ZERO
+  =b> (\m -> ONE SUC m) ZERO
+  =b> ONE SUC ZERO
+  =d> (\f x -> f x) (\n f x -> f (n f x)) (\f x -> x)
+  =a> (\a b -> a b) (\c d e -> d (c d e)) (\f g -> g)
+  =b> (\b -> (\c d e -> d (c d e)) b) (\f g -> g)
+  =b> (\c d e -> d (c d e)) (\f g -> g)
+  =b> (\d e -> d ((\f g -> g) d e))
+  =b> (\d e -> d ((\g -> g) e))
+  =b> (\d e -> d e)
+  =a> (\f x -> f x)
+  =d> ONE
+
+eval add_one_two :
+  ADD ONE TWO 
+  =d> (\n m -> n SUC m) ONE TWO
+  =b> (\m -> ONE SUC m) TWO
+  =b> ONE SUC TWO
+  =d> (\f x -> f x) (\n f x -> f (n f x)) (\f x -> f (f x))
+  =a> (\a b -> a b) (\c d e -> d (c d e)) (\f g -> f (f g))
+  =b> (\b -> (\c d e -> d (c d e)) b) (\f g -> f (f g))
+  =b> (\c d e -> d (c d e)) (\f g -> f (f g))
+  =b> (\d e -> d ((\f g -> f (f g)) d e))
+  =b> (\d e -> d ((\g -> d (d g)) e))
+  =b> (\d e -> d (d (d e)))
+  =a> (\f x -> f (f (f x)))
+  =d> THREE
